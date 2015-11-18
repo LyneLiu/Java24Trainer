@@ -20,6 +20,17 @@ public class Car {
 	}
 	
 	public static void main(String[] argv) {
+		
+		int chairs = 12;
+		boolean cancelJob = false;
+		double nationalIncome = 23863494965745.78;
+		static float hourlyRate = 12.50f;
+		final long tatalCars = 463728368392L;
+		
+		for (int i = 0; i < argv.length; i++) {
+			int temp = i;
+		}
+		
 		JamesBondCar car1 = new JamesBondCar();
 		JamesBondCar car2 = new JamesBondCar();
 	}
@@ -34,7 +45,8 @@ class JamesBondCar extends Car{
 	
 	int currentSubmergeDepth;
 	boolean isGunOnBoard=true;
-	final String MANUFACTURER;
+	// 使用final定义常量类型！
+	final String MANUFACTURER = "J.B. Limited";
 	
 	void submerge{
 		currentSubmergeDepth = 50;
