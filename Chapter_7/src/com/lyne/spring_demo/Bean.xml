@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN/EN" 
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- 一个bean对应Java中的类或者接口？ -->
+   <bean id="helloBean" class="com.lyne.spring_demo.HelloBean">
+   		<!-- property对应于class中的属性 -->
+        <property name="helloworld">
+        	<!-- value对应属性的值 -->
+            <value>Hello!Rick</value>
+        </property>
+        <!-- 通过依赖注入的方式实现HelloBean中的接口 -->
+		<property name="hello">
+			<ref bean="myWorld"></ref>
+		</property>
+   </bean>
+   <bean id="myHello" class="com.lyne.spring_demo.Hello">
+   </bean>
+   <bean id="myWorld" class="com.lyne.spring_demo.World">
+   </bean>
+</beans>
